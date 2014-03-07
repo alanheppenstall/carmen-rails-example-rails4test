@@ -1,8 +1,22 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.2'
+gem 'rails', '4.0.3'
+gem 'carmen-rails', '~> 1.0.1'
 gem 'carmen', git: 'git://github.com/jim/carmen.git'
-gem 'carmen-rails', git: 'git://github.com/jim/carmen-rails.git'
+
+#gem 'sprockets-rails', '~> 2.0.0.rc1'
+gem 'sprockets-rails', '~> 2.0.0.rc4'
+gem 'actionpack', '~> 4.0.0.rc1'
+gem 'activeresource', "~> 4.0.0"
+gem 'activesupport'
+#gem 'activerecord-session_store'
+gem "non-stupid-digest-assets"
+#maybe not required
+gem 'protected_attributes', '~> 1.0.5'
+gem 'rails-observers'
+gem 'actionpack-page_caching'
+gem 'actionpack-action_caching'
+gem 'activerecord-deprecated_finders'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -18,13 +32,14 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  # Use SCSS for stylesheets
+gem 'sass-rails', '~> 4.0.0'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer'
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
 
-  gem 'uglifier', '>= 1.0.3'
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '~> 4.0.0'
 end
 
 gem 'jquery-rails'
